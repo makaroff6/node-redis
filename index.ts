@@ -49,7 +49,7 @@ export function createClient<
         ...options,
         modules: {
             ...modules,
-            ...(options?.modules as M)
+            ...(options.modules ?? null as M)
         }
     });
 }
@@ -71,7 +71,7 @@ export function createCluster<
         ...options,
         modules: {
             ...modules,
-            ...(options?.modules as M)
+            ...(options.modules ?? null as M)
         }
     });
 }
